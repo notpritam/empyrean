@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 
 function Homepage() {
-  const latest = [1, 2, 3, 4];
+  const latest = [11, 32, 23, 34];
   return (
     <>
       <Header />
