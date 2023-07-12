@@ -15,7 +15,7 @@ function Header() {
         <div>
           <img onClick={() => setMenuState(true)} src={menu}></img>
         </div>
-        <div className="uppercase text-[22px] font-lora">
+        <div className="uppercase text-[22px] font-lora tracking-[.2em]">
           <Link to={"/"} className="font-lora">
             empyrean
           </Link>

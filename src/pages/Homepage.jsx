@@ -12,15 +12,15 @@ function Homepage() {
       <Header />
       <div className="relative min-h-[480px] mt-[50px] flex items-center justify-center">
         <img
-          className="absolute  top-0 bottom-0 object-cover h-full w-full "
+          className="absolute top-0 bottom-0 object-cover w-full h-full "
           src="https://bouguessa.com/cdn/shop/files/76A15BB2-CB84-4C5F-850F-9EECDE345994_1500x.jpg?v=1688376212"
         ></img>
 
-        <div className=" z-10  flex flex-col text-white items-center gap-4">
+        <div className=" z-10  flex flex-col text-white items-center gap-4 tracking-[.2em]">
           <span className="text-[12px] font-light">SPRING SUMMER 2023</span>
           <span className="text-[20px]">SUMMER IN THE CITY</span>
-          <Link className="flex gap-1 items-end justify-center" to={"/"}>
-            <span className="text-[15px] underline underline-offset-4">
+          <Link className="flex items-end justify-center gap-1" to={"/"}>
+            <span className="text-[12px] underline underline-offset-4">
               Discover
             </span>
             <img className="h-[17px] " src={linkImage}></img>
@@ -28,7 +28,7 @@ function Homepage() {
         </div>
       </div>
 
-      <div className="flex flex-col w-full pl-4 pr-4 pt-12 gap-8">
+      <div className="flex flex-col w-full gap-8 pt-12 pl-4 pr-4">
         <div className="flex flex-col items-center gap-4">
           <span className="uppercase text-[14px] font-light">
             PERfectly Paired
@@ -38,7 +38,7 @@ function Homepage() {
           </div>
           <span>Petra Printed Set</span>
 
-          <Link className="  font-light" to={"/"}>
+          <Link className="font-light " to={"/"}>
             <span>Discover</span>
           </Link>
         </div>
@@ -49,8 +49,8 @@ function Homepage() {
         </div>
       </div>
 
-      <div className=" flex flex-col gap-4">
-        <div className=" grid grid-cols-2 gap-2 gap-y-4 pl-4 pr-4 pt-12">
+      <div className="flex flex-col gap-4 ">
+        <div className="grid grid-cols-2 gap-2 pt-12 pl-4 pr-4 gap-y-4">
           {latest.map((item) => (
             <>
               <div key={item} className="flex flex-col gap-4">
@@ -61,12 +61,12 @@ function Homepage() {
                   <img src="https://bouguessa.com/cdn/shop/products/Bouguessa_11-2_1927_600x.jpg?v=1681680386"></img>
                 </div>
 
-                <div className="flex flex-col gap-2 items-center">
+                <div className="flex flex-col items-center gap-2">
                   <span className="uppercase text-[14px] font-light">
                     LINA LONG SHIRT DRESS
                   </span>
                   <div className="flex gap-4 items-center text-[15px]">
-                    <span className=" font-normal text-red-500">$249.50</span>
+                    <span className="font-normal text-red-500 ">$249.50</span>
                     <span className=" font-normal line-through text-[14px] ">
                       $499
                     </span>
@@ -84,32 +84,32 @@ function Homepage() {
         </div>
       </div>
 
-      <div className=" w-full mt-12 mb-12">
+      <div className="w-full mt-12 mb-12 ">
         <div className="w-full min-h-[480px]">
           <img
-            className="w-full h-full object-cover"
+            className="object-cover w-full h-full"
             src="https://bouguessa.com/cdn/shop/files/BOUGUESSA_FW22_3000x1100_8c9c13bb-a5af-4e4f-87e2-40151027821f_750x960_crop_center.jpg?v=1662477136"
           ></img>
         </div>
 
-        <div className="flex w-full items-center justify-center mt-2">
+        <div className="flex items-center justify-center w-full mt-2">
           <span className="text-[18px] font-light">Fall Winter 2022</span>
         </div>
       </div>
 
-      <div className="flex flex-col items-center pl-4 pr-4 gap-8">
+      <div className="flex flex-col items-center gap-8 pl-4 pr-4">
         <div className="flex flex-col gap-4 w-[60%]">
           <div className="flex items-center justify-center">
             <span className="uppercase">Fall Winter 2022</span>
           </div>
           <div className="w-full">
             <img
-              className="object-cover h-auto w-full"
+              className="object-cover w-full h-auto"
               src="https://bouguessa.com/cdn/shop/files/HOMEPAGE_750x1110-min_1500x.jpg?v=1662724189"
             ></img>
           </div>
 
-          <div className="flex justify-center items-center">
+          <div className="flex items-center justify-center">
             <span className="underline-offset-[6px] underline">
               Disover the collection
             </span>
@@ -120,8 +120,8 @@ function Homepage() {
         </div>
       </div>
 
-      <div className=" flex flex-col gap-4">
-        <div className=" grid grid-cols-2 gap-2 gap-y-4 pl-4 pr-4 pt-12">
+      <div className="flex flex-col gap-4 ">
+        <div className="grid grid-cols-2 gap-2 pt-12 pl-4 pr-4 gap-y-4">
           {latest.map((item) => (
             <>
               <a href="/products/test">
@@ -133,12 +133,12 @@ function Homepage() {
                     <img src="https://bouguessa.com/cdn/shop/products/Bouguessa_11-2_1927_600x.jpg?v=1681680386"></img>
                   </div>
 
-                  <div className="flex flex-col gap-2 items-center">
+                  <div className="flex flex-col items-center gap-2">
                     <span className="uppercase text-[14px] font-light ">
                       LINA LONG SHIRT DRESS
                     </span>
                     <div className="flex gap-4 items-center text-[15px]">
-                      <span className=" font-normal text-red-500">$249.50</span>
+                      <span className="font-normal text-red-500 ">$249.50</span>
                       <span className=" font-normal line-through text-[14px] ">
                         $499
                       </span>

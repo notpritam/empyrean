@@ -19,7 +19,7 @@ function Product() {
               className=""
               src="https://bouguessa.com/cdn/shop/products/Bouguessa_11-2_1933_800x.jpg?v=1681680386"
             ></img>
-            <div className="z-1 absolute top-8 right-3 flex flex-col gap-2">
+            <div className="absolute flex flex-col gap-2 z-1 top-8 right-3">
               <div className="rounded-[50%] h-[35px] w-[35px] bg-white flex items-center justify-center">
                 <img className="h-[16px] w-[16px]" src={add}></img>
               </div>
@@ -34,7 +34,7 @@ function Product() {
           <div className="w-full flex-col gap-4 flex items-center justify-center  pb-8 border-b-[1px] border-black">
             <span className="uppercase">Lina Long Shirt Dress</span>
             <div className="flex gap-4 items-center text-[15px]">
-              <span className=" font-normal text-red-500">$249.50</span>
+              <span className="font-normal text-red-500 ">$249.50</span>
               <span className=" font-normal line-through text-[14px] ">
                 $499
               </span>
@@ -54,7 +54,7 @@ function Product() {
 
             <div className="flex flex-col gap-2">
               <span className="">SIZE & FIT</span>
-              <ul className="list-disc pl-6 pr-6 flex flex-col gap-2">
+              <ul className="flex flex-col gap-2 pl-6 pr-6 list-disc">
                 <li>Fits true to size,take your normal size</li>
                 <li>Designed for a comfortable A-Line fit</li>
                 <li>Light Weight, Cotton fabric</li>
@@ -74,7 +74,7 @@ function Product() {
                 <li>Made in United Arab Emirates</li>
                 <li>Need Help or advice? Call or whatsapp +971 52 679 9878</li>
               </ul>
-              <div className="flex gap-2 items-center">
+              <div className="flex items-center gap-2">
                 <span>Share</span>
                 <img className="h-[12px]" src={fb}></img>
                 <img className="h-[12px]" src={insta}></img>
@@ -87,50 +87,50 @@ function Product() {
                 <span>Size :</span>
                 <span className="underline underline-offset-4">Size Chart</span>
               </div>
-              <div className="flex gap-3">
-                <div className="border-[1px] p-1 pl-2 pr-2 flex items-center justify-center font-light text-[18px] uppercase">
+              <div className="flex gap-3 tracking-[.2em] text-[16px] uppercase">
+                <div className="border-[1px] p-1 pl-2 pr-2 flex items-center justify-center font-light ">
                   XS
                 </div>
-                <div className="border-[1px] p-1 pl-2 pr-2 flex items-center justify-center font-light text-[18px] uppercase">
+                <div className="border-[1px] p-1 pl-2 pr-2 flex items-center justify-center font-light  ">
                   S
                 </div>
-                <div className="border-[1px] p-1 pl-2 pr-2 flex items-center justify-center font-light text-[18px] uppercase">
+                <div className="border-[1px] p-1 pl-2 pr-2 flex items-center justify-center font-light  ">
                   M
                 </div>
-                <div className="border-[1px] p-1 pl-2 pr-2 flex items-center justify-center font-light text-[18px] uppercase">
+                <div className="border-[1px] p-1 pl-2 pr-2 flex items-center justify-center font-light ">
                   L
                 </div>
-                <div className="border-[1px] p-1 pl-2 pr-2 flex items-center justify-center font-light text-[18px] uppercase">
+                <div className="border-[1px] p-1 pl-2 pr-2 flex items-center justify-center font-light t">
                   XL
                 </div>
               </div>
             </div>
 
             <div className="flex flex-col gap-2">
-              <div className="flex  justify-between">
+              <div className="flex justify-between">
                 <span>Color :</span>
               </div>
-              <div className="flex  flex-wrap gap-3">
-                <div className="border-[1px] p-1 pl-2 pr-2 flex items-center justify-center font-light text-[14px] uppercase">
+              <div className="flex flex-wrap gap-3 text-[14px]  uppercase">
+                <div className="border-[1px] p-1 pl-2 pr-2 flex items-center justify-center font-light ">
                   Yellow/ White Stripes
                 </div>
-                <div className="border-[1px] p-1 pl-2 pr-2 flex items-center justify-center font-light text-[14px] uppercase">
+                <div className="border-[1px] p-1 pl-2 pr-2 flex items-center justify-center font-light ">
                   Black/ White Stripes
                 </div>
-                <div className="border-[1px] p-1 pl-2 pr-2 flex items-center justify-center font-light text-[14px] uppercase">
+                <div className="border-[1px] p-1 pl-2 pr-2 flex items-center justify-center font-light ">
                   Pink/ White Stripes
                 </div>
-                <div className="border-[1px] p-1 pl-2 pr-2 flex items-center justify-center font-light text-[14px] uppercase">
+                <div className="border-[1px] p-1 pl-2 pr-2 flex items-center justify-center font-light ">
                   Green/ White Stripes
                 </div>
               </div>
             </div>
 
             <div className="flex flex-col gap-2">
-              <div className="flex  justify-between">
+              <div className="flex justify-between">
                 <span>Fit :</span>
               </div>
-              <div className="flex  flex-wrap gap-3">
+              <div className="flex flex-wrap gap-3">
                 <div className="border-[1px] p-1 pl-2 pr-2 flex items-center justify-center font-light text-[14px] uppercase">
                   Standard
                 </div>
@@ -140,7 +140,7 @@ function Product() {
               </div>
             </div>
 
-            <div className="border-[1px] border-black flex items-center justify-center font-light p-2 gap-4">
+            <div className="border-[1px] border-borderColor  flex items-center justify-center font-light p-2 gap-4">
               <span>ADD TO CART</span>
 
               <span>$249.50</span>
@@ -162,7 +162,7 @@ function Product() {
             You may also like
           </div>
 
-          <div className="flex flex-nowrap gap-4 overflow-hidden overflow-x-auto hide_scrollbar">
+          <div className="flex gap-4 overflow-hidden overflow-x-auto flex-nowrap hide_scrollbar">
             <div className="flex min-h-[400px] ml-[30vw] min-w-[208px] flex-col gap-4">
               <div className="relative">
                 <div className="text-[11px] pl-2 pr-2 p-1 bg-white absolute top-2 left-2 font-light rounded-[4px]">
@@ -171,12 +171,12 @@ function Product() {
                 <img src="https://bouguessa.com/cdn/shop/products/Bouguessa_11-2_1927_600x.jpg?v=1681680386"></img>
               </div>
 
-              <div className="flex flex-col gap-2 items-center">
+              <div className="flex flex-col items-center gap-2">
                 <span className="uppercase text-[14px] font-light">
                   LINA LONG SHIRT DRESS
                 </span>
                 <div className="flex gap-4 items-center text-[15px]">
-                  <span className=" font-normal text-red-500">$249.50</span>
+                  <span className="font-normal text-red-500 ">$249.50</span>
                   <span className=" font-normal line-through text-[14px] ">
                     $499
                   </span>
@@ -192,12 +192,12 @@ function Product() {
                 <img src="https://bouguessa.com/cdn/shop/products/Bouguessa_11-2_1927_600x.jpg?v=1681680386"></img>
               </div>
 
-              <div className="flex flex-col gap-2 items-center">
+              <div className="flex flex-col items-center gap-2">
                 <span className="uppercase text-[14px] font-light">
                   LINA LONG SHIRT DRESS
                 </span>
                 <div className="flex gap-4 items-center text-[15px]">
-                  <span className=" font-normal text-red-500">$249.50</span>
+                  <span className="font-normal text-red-500 ">$249.50</span>
                   <span className=" font-normal line-through text-[14px] ">
                     $499
                   </span>
@@ -213,12 +213,12 @@ function Product() {
                 <img src="https://bouguessa.com/cdn/shop/products/Bouguessa_11-2_1927_600x.jpg?v=1681680386"></img>
               </div>
 
-              <div className="flex flex-col gap-2 items-center">
+              <div className="flex flex-col items-center gap-2">
                 <span className="uppercase text-[14px] font-light">
                   LINA LONG SHIRT DRESS
                 </span>
                 <div className="flex gap-4 items-center text-[15px]">
-                  <span className=" font-normal text-red-500">$249.50</span>
+                  <span className="font-normal text-red-500 ">$249.50</span>
                   <span className=" font-normal line-through text-[14px] ">
                     $499
                   </span>
@@ -233,7 +233,7 @@ function Product() {
             Recently Viewed
           </div>
 
-          <div className="flex flex-nowrap gap-4 overflow-hidden overflow-x-auto hide_scrollbar">
+          <div className="flex gap-4 overflow-hidden overflow-x-auto flex-nowrap hide_scrollbar">
             <div className="flex min-h-[400px] ml-[30vw] min-w-[208px] flex-col gap-4">
               <div className="relative">
                 <div className="text-[11px] pl-2 pr-2 p-1 bg-white absolute top-2 left-2 font-light rounded-[4px]">
@@ -242,12 +242,12 @@ function Product() {
                 <img src="https://bouguessa.com/cdn/shop/products/Bouguessa_11-2_1927_600x.jpg?v=1681680386"></img>
               </div>
 
-              <div className="flex flex-col gap-2 items-center">
+              <div className="flex flex-col items-center gap-2">
                 <span className="uppercase text-[14px] font-light">
                   LINA LONG SHIRT DRESS
                 </span>
                 <div className="flex gap-4 items-center text-[15px]">
-                  <span className=" font-normal text-red-500">$249.50</span>
+                  <span className="font-normal text-red-500 ">$249.50</span>
                   <span className=" font-normal line-through text-[14px] ">
                     $499
                   </span>
@@ -263,12 +263,12 @@ function Product() {
                 <img src="https://bouguessa.com/cdn/shop/products/Bouguessa_11-2_1927_600x.jpg?v=1681680386"></img>
               </div>
 
-              <div className="flex flex-col gap-2 items-center">
+              <div className="flex flex-col items-center gap-2">
                 <span className="uppercase text-[14px] font-light">
                   LINA LONG SHIRT DRESS
                 </span>
                 <div className="flex gap-4 items-center text-[15px]">
-                  <span className=" font-normal text-red-500">$249.50</span>
+                  <span className="font-normal text-red-500 ">$249.50</span>
                   <span className=" font-normal line-through text-[14px] ">
                     $499
                   </span>
@@ -284,12 +284,12 @@ function Product() {
                 <img src="https://bouguessa.com/cdn/shop/products/Bouguessa_11-2_1927_600x.jpg?v=1681680386"></img>
               </div>
 
-              <div className="flex flex-col gap-2 items-center">
+              <div className="flex flex-col items-center gap-2">
                 <span className="uppercase text-[14px] font-light">
                   LINA LONG SHIRT DRESS
                 </span>
                 <div className="flex gap-4 items-center text-[15px]">
-                  <span className=" font-normal text-red-500">$249.50</span>
+                  <span className="font-normal text-red-500 ">$249.50</span>
                   <span className=" font-normal line-through text-[14px] ">
                     $499
                   </span>

@@ -23,41 +23,41 @@ const Sidebar = (props) => {
               <img onClick={() => setMenuState(!menuState)} src={close}></img>
             </div>
             <div>
-              <div className="flex justify-between items-center text-white uppercase font-light">
+              <div className="flex items-center justify-between font-light text-white uppercase">
                 <span>Shop</span>
                 <img src={add}></img>
               </div>
-              <div className="mt-4 h-[1px] bg-white w-full"></div>
+              <div className="mt-4 h-[1px] bg-borderColor w-full"></div>
             </div>
             <div>
-              <div className="flex justify-between items-center text-white uppercase font-light">
+              <div className="flex items-center justify-between font-light text-white uppercase">
                 <span>Collections</span>
                 <img src={add}></img>
               </div>
-              <div className="mt-4 h-[1px] bg-white w-full"></div>
+              <div className="mt-4 h-[1px] bg-borderColor w-full"></div>
             </div>
             <div>
-              <div className="flex justify-between items-center text-white uppercase font-light">
+              <div className="flex items-center justify-between font-light text-white uppercase">
                 <span>About</span>
               </div>
-              <div className="mt-4 h-[1px] bg-white w-full"></div>
+              <div className="mt-4 h-[1px] bg-borderColor w-full"></div>
             </div>
             <div>
-              <div className="flex justify-between items-center text-white uppercase font-light">
+              <div className="flex items-center justify-between font-light text-white uppercase">
                 <span>Journal</span>
               </div>
-              <div className="mt-4 h-[1px] bg-white w-full"></div>
+              <div className="mt-4 h-[1px] bg-borderColor w-full"></div>
             </div>
 
-            <div className="flex flex-col gap-2 text-gray-500">
+            <div className="flex flex-col gap-2 text-subtitle">
               <span>Retailers</span>
               <span>Contact</span>
               <span>Account</span>
             </div>
           </div>
 
-          <div className="w-full h-[50px] text-gray-600 flex justify-between border-t-[1px] border-gray-500">
-            <div className="flex-[4] flex items-center justify-center border-r-[1px] border-gray-500 ">
+          <div className="w-full h-[50px] text-subtitle flex justify-between border-t-[1px] border-borderColor">
+            <div className="flex-[4] flex items-center justify-center border-r-[1px] border-borderColor ">
               USD
             </div>
             <div className="flex gap-4 flex-[6] items-center justify-center">
