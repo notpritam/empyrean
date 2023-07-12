@@ -1,0 +1,9 @@
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="Icon Icon--share" role="presentation" viewBox="0 0 24 24" width="24"  height="24" >
+      <g stroke="#000000" fill="none" fill-rule="evenodd" stroke-width="1.5px" stroke-opacity="0.5">
+        <path d="M8.6,10.2 L15.4,6.8" stroke="#000000" fill="none" stroke-width="1.5px" stroke-opacity="0.5"></path>
+        <path d="M8.6,13.7 L15.4,17.1" stroke="#000000" fill="none" stroke-width="1.5px" stroke-opacity="0.5"></path>
+        <circle stroke-linecap="square" cx="5" cy="12" r="4" stroke="#000000" fill="none" stroke-width="1.5px" stroke-opacity="0.5"></circle>
+        <circle stroke-linecap="square" cx="19" cy="5" r="4" stroke="#000000" fill="none" stroke-width="1.5px" stroke-opacity="0.5"></circle>
+        <circle stroke-linecap="square" cx="19" cy="19" r="4" stroke="#000000" fill="none" stroke-width="1.5px" stroke-opacity="0.5"></circle>
+      </g>
+    </svg>

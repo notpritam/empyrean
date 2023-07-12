@@ -1,0 +1,6 @@
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="Icon Icon--plus" role="presentation" viewBox="0 0 16 16" width="16" height="16">
+      <g stroke="#ffffff" fill="none" fill-rule="evenodd" stroke-linecap="square" stroke-opacity="0.5">
+        <path d="M8,1 L8,15" stroke="#ffffff" fill="none" stroke-opacity="0.5"/>
+        <path d="M1,8 L15,8" stroke="#ffffff" fill="none" stroke-opacity="0.5"/>
+      </g>
+    </svg>

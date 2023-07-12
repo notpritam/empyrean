@@ -10,9 +10,9 @@ function Homepage() {
   return (
     <>
       <Header />
-      <div className="relative min-h-[480px] mt-[50px] flex items-center justify-center z-10">
+      <div className="relative min-h-[480px] mt-[50px] flex items-center justify-center">
         <img
-          className="absolute z-0 top-0 bottom-0 object-cover h-full w-full "
+          className="absolute  top-0 bottom-0 object-cover h-full w-full "
           src="https://bouguessa.com/cdn/shop/files/76A15BB2-CB84-4C5F-850F-9EECDE345994_1500x.jpg?v=1688376212"
         ></img>
 
@@ -43,7 +43,9 @@ function Homepage() {
           </Link>
         </div>
         <div>
-          <img src="https://bouguessa.com/cdn/shop/products/Bouguessa_11-2_2400_1000x.jpg?v=1679168976"></img>
+          <Link to={"/collections"}>
+            <img src="https://bouguessa.com/cdn/shop/products/Bouguessa_11-2_2400_1000x.jpg?v=1679168976"></img>
+          </Link>
         </div>
       </div>
 
@@ -90,7 +92,7 @@ function Homepage() {
           ></img>
         </div>
 
-        <div className="flex w-full items-center justify-center m-2">
+        <div className="flex w-full items-center justify-center mt-2">
           <span className="text-[18px] font-light">Fall Winter 2022</span>
         </div>
       </div>
@@ -122,26 +124,28 @@ function Homepage() {
         <div className=" grid grid-cols-2 gap-2 gap-y-4 pl-4 pr-4 pt-12">
           {latest.map((item) => (
             <>
-              <div key={item} className="flex flex-col gap-4">
-                <div className="relative">
-                  <div className="text-[11px] pl-2 pr-2 p-1 bg-white absolute top-2 left-2">
-                    ON SALE
+              <a href="/products/test">
+                <div key={item} className="flex flex-col gap-4">
+                  <div className="relative">
+                    <div className="text-[11px] pl-2 pr-2 p-1 bg-white absolute top-2 left-2">
+                      ON SALE
+                    </div>
+                    <img src="https://bouguessa.com/cdn/shop/products/Bouguessa_11-2_1927_600x.jpg?v=1681680386"></img>
                   </div>
-                  <img src="https://bouguessa.com/cdn/shop/products/Bouguessa_11-2_1927_600x.jpg?v=1681680386"></img>
-                </div>
 
-                <div className="flex flex-col gap-2 items-center">
-                  <span className="uppercase text-[14px] font-light ">
-                    LINA LONG SHIRT DRESS
-                  </span>
-                  <div className="flex gap-4 items-center text-[15px]">
-                    <span className=" font-normal text-red-500">$249.50</span>
-                    <span className=" font-normal line-through text-[14px] ">
-                      $499
+                  <div className="flex flex-col gap-2 items-center">
+                    <span className="uppercase text-[14px] font-light ">
+                      LINA LONG SHIRT DRESS
                     </span>
+                    <div className="flex gap-4 items-center text-[15px]">
+                      <span className=" font-normal text-red-500">$249.50</span>
+                      <span className=" font-normal line-through text-[14px] ">
+                        $499
+                      </span>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </a>
             </>
           ))}
         </div>

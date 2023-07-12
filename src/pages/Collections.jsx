@@ -40,20 +40,22 @@ function Collections() {
         <div className="flex flex-col gap-4">
           {latest.map((item, index) => (
             <>
-              <div
-                key={index}
-                className="overflow-hidden rounded-md  flex items-center justify-center relative z-[1] h-[550px] w-full bg-black"
-              >
-                <img
-                  className=" absolute z-0 top-0 left-0 h-full w-full object-cover opacity-60"
-                  src={item.url}
-                ></img>
+              <a href="/collections/spring">
+                <div
+                  key={index}
+                  className="overflow-hidden rounded-md  flex items-center justify-center relative z-[1] h-[550px] w-full bg-black"
+                >
+                  <img
+                    className=" absolute z-0 top-0 left-0 h-full w-full object-cover opacity-60"
+                    src={item.url}
+                  ></img>
 
-                <div className="uppercase text-white items-center relative z-[1] flex flex-col gap-4">
-                  <span className="text-[14px]">COLLECTION</span>
-                  <span className="text-[18px]">{item.title}</span>
+                  <div className="uppercase text-white items-center relative z-[1] flex flex-col gap-4">
+                    <span className="text-[14px]">COLLECTION</span>
+                    <span className="text-[18px]">{item.title}</span>
+                  </div>
                 </div>
-              </div>
+              </a>
             </>
           ))}
         </div>
