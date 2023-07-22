@@ -17,7 +17,7 @@ const Cart = (props) => {
             : `w-screen fixed top-0   right-[-100%] z-[9999] h-screen flex justify-end transition-all ease-in-out duration-500`
         }
       >
-        <div className="w-[80%] bg-background h-screen flex flex-col justify-between ease-in-out duration-700">
+        <div className="w-[80%] max-w-[360px] bg-background h-screen flex flex-col justify-between ease-in-out duration-700">
           <div className="flex justify-between border-b-[1px] pb-2 border-bg p-4">
             <div className="uppercase">
               <span>CART</span>
@@ -36,7 +36,7 @@ const Cart = (props) => {
                 ></img>
               </div>
 
-              <div className="flex gap-2 flex-col ">
+              <div className="flex flex-col gap-2 ">
                 <span className="text-[12px] tracking-[.2em]">
                   LEA SLEVELESS DRESS
                 </span>

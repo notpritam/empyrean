@@ -6,7 +6,7 @@ import yt from "../assets/img/svg/yt.svg";
 
 function Footer() {
   return (
-    <footer className="sticky grid grid-cols-2 pb-4 pl-4 pr-4 mt-12 gap-y-8 ">
+    <footer className="sticky grid grid-cols-2 pb-4 pl-4 pr-4 mt-12 gap-y-8 md:grid-cols-3">
       <div className="flex flex-col gap-4">
         <span className="text-[14px] tracking-[.2em]">SHOP MENU</span>
         <div className="flex flex-col gap-4 text-subtitle">
@@ -30,7 +30,7 @@ function Footer() {
         </div>
       </div>
 
-      <div className="flex flex-col col-span-2 gap-4 ">
+      <div className="flex flex-col col-span-2 gap-4 md:col-span-1 ">
         <span className="uppercase tracking-[.2em]">NEWSLETTER</span>
         <div className="flex flex-col gap-2 text-subtitle">
           <span>Sign up for 10% off your next order*</span>

@@ -64,18 +64,6 @@ const Sort = (props) => {
               </div>
             </div>
           </div>
-
-          <div className="w-full h-[50px] text-subtitle flex justify-between border-t-[1px] border-borderColor">
-            <div className="flex-[4] flex items-center justify-center border-r-[1px] border-borderColor ">
-              USD
-            </div>
-            <div className="flex gap-4 flex-[6] items-center justify-center">
-              <img className="h-[18px]" src={fb}></img>
-              <img className="h-[18px]" src={pin}></img>
-              <img className="h-[18px]" src={insta}></img>
-              <img className="h-[18px]" src={yt}></img>
-            </div>
-          </div>
         </div>
       </div>
     </>

@@ -17,7 +17,7 @@ const Sidebar = (props) => {
             : `w-screen fixed top-0   left-[-100%] z-[9999] h-screen flex flex-col justify-between  transition-all ease-in-out duration-500`
         }
       >
-        <div className="w-[80%] bg-black h-screen flex flex-col justify-between ease-in-out duration-700">
+        <div className="w-[80%] max-w-[360px] bg-black h-screen flex flex-col justify-between ease-in-out duration-700">
           <div className="w-full p-4 flex gap-6 flex-col text-[14px]">
             <div>
               <img onClick={() => setMenuState(!menuState)} src={close}></img>

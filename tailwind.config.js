@@ -11,6 +11,7 @@ export default {
         background: "#fafafa",
         borderColor: "#d9d9d9",
         subtitle: "#6a6a6a",
+        textColor: "#1c1b1b",
       },
     },
   },
