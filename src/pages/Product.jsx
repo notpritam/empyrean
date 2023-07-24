@@ -9,12 +9,9 @@ import insta from "../assets/img/svg/insta.svg";
 import heart from "../assets/img/svg/heart.svg";
 
 import {
-  Navigation,
   Pagination,
-  Scrollbar,
   A11y,
   EffectCreative,
-  FreeMode,
   Mousewheel,
   Autoplay,
 } from "swiper/modules";
