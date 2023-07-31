@@ -1,26 +1,33 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import SingleProductItem from "./SingleProductItem";
 
-function FeaturedSection() {
+function FeaturedSection({ collectionId, count }) {
   const latest = [11, 32, 23, 34];
 
   const [products, setProducts] = useState([]);
+  const [featured, setFeatured] = useState([]);
 
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     setLoading(true);
-    getProducts(4, "spring-summer-2023");
+    getProducts(count, collectionId);
   }, []);
 
-  const getProducts = (count, collection) => {
+  const getProducts = (total, collection) => {
     axios
       .get(
-        `http://localhost:3000/featured?count=` + count + `&coll=` + collection
+        `http://localhost:3000/collections/home?id=` +
+          collection +
+          `&count=` +
+          total
       )
       .then((res) => {
-        setProducts(res.data);
+        setProducts(res.data.products);
+        console.log(res.data.products);
+        setFeatured(res.data.featured[0].featuredImage);
         console.log(res.data);
         setLoading(false);
       })
@@ -43,24 +50,22 @@ function FeaturedSection() {
       <div className="flex flex-col  gap-8 pt-12 pl-4 pr-4 md:flex-row md:gap-0">
         <div className="flex flex-col items-center justify-center flex-1 gap-4">
           <span className="uppercase text-[14px] font-light">
-            PERfectly Paired
+            {/* {console.log(featured, "testt")} */}
+            {featured[0].subtitle}
           </span>
           <div className="pl-20 pr-20">
-            <img src="https://bouguessa.com/cdn/shop/products/Bouguessa_11-2_1539_6869babc-6792-4f01-8a0d-963cfc0432a7_1500x.jpg?v=1677002969"></img>
+            <img src={featured[0].image}></img>
           </div>
-          <span>Petra Printed Set</span>
+          <span>{featured[0].title}</span>
 
           <Link className="font-light " to={"/"}>
-            <span>Discover</span>
+            <span>{featured[0].linkText}</span>
           </Link>
         </div>
 
         <div className="flex-1">
           <Link to={"/collections"}>
-            <img
-              className="w-full h-full"
-              src="https://bouguessa.com/cdn/shop/products/Bouguessa_11-2_2400_1000x.jpg?v=1679168976"
-            ></img>
+            <img className="w-full h-full" src={featured[1].image}></img>
           </Link>
         </div>
       </div>
@@ -68,36 +73,18 @@ function FeaturedSection() {
       <div className="flex flex-col gap-4 md:gap-12">
         <div className="grid grid-cols-2 gap-2 pt-12 pl-4 pr-4 xl:gap-[60px] md:gap-[24px] lg:grid-cols-4 gap-y-4">
           {products.map((item) => (
-            <>
-              <Link to={"/products/" + item.productId}>
-                <div key={item._id} className="flex flex-col gap-4">
-                  <div className="relative">
-                    <div className="text-[11px] pl-2 pr-2 p-1 bg-white absolute top-2 left-2 font-light rounded-[4px]">
-                      ON SALE
-                    </div>
-                    <img
-                      src={
-                        "https://bouguessa.com/cdn/shop/products/Bouguessa_11-2_1927_600x.jpg?v=1681680386"
-                      }
-                    ></img>
-                  </div>
-
-                  <div className="flex flex-col items-center gap-2">
-                    <span className="uppercase text-[14px] font-light">
-                      {item.name}
-                    </span>
-                    <div className="flex gap-4 items-center text-[15px]">
-                      <span className="font-normal text-red-500 ">
-                        ${item.discountPrice}
-                      </span>
-                      <span className=" font-normal line-through text-[14px] ">
-                        ${item.price}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </Link>
-            </>
+            <SingleProductItem
+              key={item._id}
+              _id={item._id}
+              image={
+                "https://bouguessa.com/cdn/shop/products/Bouguessa_11-2_1927_400x.jpg?v=1681680386"
+              }
+              name={item.name}
+              price={item.price}
+              discountPrice={item.discountPrice}
+              productId={item.productId}
+              stock={"On Sale"}
+            />
           ))}
         </div>
 

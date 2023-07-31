@@ -5,6 +5,7 @@ import grayDropdown from "../assets/img/svg/grayDropdown.svg";
 import { Link } from "react-router-dom";
 import Filters from "../components/Filters";
 import Sort from "../components/Sort";
+import SingleProductItem from "../components/SingleProductItem";
 
 function CollectionProducts() {
   const latest = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
@@ -162,33 +163,20 @@ function CollectionProducts() {
           </div>
 
           <div className="grid grid-cols-2 gap-3 pl-4 pr-4 sm:gap-6 md:gap-10 lg:gap-12 xl:gap-[60px] pt-46 sm:grid-cols-3 xl:grid-cols-4 gap-y-8">
-            {latest.map((item) => (
+            {latest.map((item, index) => (
               <>
-                <Link to="/products/spring">
-                  <div key={item} className="flex flex-col gap-4">
-                    <div className="relative">
-                      <div className="text-[11px] pl-2 pr-2 p-1 bg-white absolute top-2 left-2 font-light rounded-[4px]">
-                        ON SALE
-                      </div>
-
-                      <img src="https://bouguessa.com/cdn/shop/products/Bouguessa_11-2_1927_600x.jpg?v=1681680386"></img>
-                    </div>
-
-                    <div className="flex flex-col items-center gap-2">
-                      <span className="uppercase text-[14px] font-light">
-                        LINA LONG SHIRT DRESS
-                      </span>
-                      <div className="flex gap-4 items-center text-[15px]">
-                        <span className="font-normal text-red-500 ">
-                          $249.50
-                        </span>
-                        <span className=" font-normal line-through text-[14px] ">
-                          $499
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </Link>
+                <SingleProductItem
+                  key={index}
+                  _id={index}
+                  image={
+                    "https://bouguessa.com/cdn/shop/products/Bouguessa_11-2_1927_400x.jpg?v=1681680386"
+                  }
+                  name={"Test Name" + index}
+                  price={"21" + index}
+                  discountPrice={"16" + index}
+                  productId={index}
+                  stock={"On Sale"}
+                />
               </>
             ))}
           </div>

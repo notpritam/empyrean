@@ -15,7 +15,7 @@ function Homepage() {
     <>
       <Header />
       <Hero />
-      <FeaturedSection />
+      <FeaturedSection collectionId={"spring-summer-2023"} count={4} />
 
       <div className="w-full mt-12 mb-12 ">
         <div className="w-full flex max-h-[480px] sm:max-h-[500px] bg-[#f5f0eb] ">
@@ -30,7 +30,9 @@ function Homepage() {
         </div>
       </div>
 
-      <div className="max-w-[1440px] m-auto">
+      <FeaturedSection collectionId={"fall-winter-21"} count={"4"} />
+
+      {/* <div className="max-w-[1440px] m-auto">
         <div className="flex flex-col w-full gap-8 pt-12 pl-4 pr-4 md:flex-row md:gap-0">
           <div className="flex flex-col items-center justify-center flex-1 gap-4">
             <span className="uppercase text-[14px] font-light">
@@ -91,7 +93,7 @@ function Homepage() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       <Footer />
     </>
   );

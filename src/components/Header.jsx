@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import menu from "../assets/img/svg/menu.svg";
 import search from "../assets/img/svg/search.svg";
 import bag from "../assets/img/svg/bag.svg";
@@ -8,20 +8,28 @@ import profile from "../assets/img/svg/profile.svg";
 import { Link } from "react-router-dom";
 import Sidebar from "./Sidebar";
 import Cart from "./Cart";
+import axios from "axios";
 function Header() {
   const [menuState, setMenuState] = useState(false);
   const [cartState, setCartState] = useState(false);
   const [openMenu, setOpenMenu] = useState(false);
   const [currentMenu, setCurrentMenu] = useState(0);
+  const [collection, setCollection] = useState([]);
 
-  const divContent = useMemo(
-    () => (
-      <div className="w-full absolute top-0 h-[200px] z-[9999] left-0 right-0 bg-white flex">
-        test
-      </div>
-    ),
-    []
-  );
+  useEffect(() => {
+    getCollections();
+  }, []);
+
+  const getCollections = () => {
+    axios
+      .get("http://localhost:3000/collection")
+      .then((res) => {
+        console.log(res.data);
+        setCollection(res.data);
+      })
+      .catch();
+  };
+
   return (
     <>
       <div className="flex  fixed top-0 z-[999] flex-col w-screen ">
@@ -164,23 +172,22 @@ function Header() {
               : "hidden duration-500 ease-out"
           }
         >
-          <div className="flex flex-col w-full h-full gap-6 p-12">
-            <img src="https://bouguessa.com/cdn/shop/files/cec_370x230_crop_center@2x.jpg?v=1677062348"></img>
-            <span className="text-[14px] tracking-[.2em] uppercase text-center">
-              Shop the new fall winter 2023 collection
-            </span>
-          </div>
-          <div className="flex flex-col w-full h-full gap-6 p-12">
-            <img src="https://bouguessa.com/cdn/shop/files/cec_370x230_crop_center@2x.jpg?v=1677062348"></img>
-            <span className="text-[14px] tracking-[.2em] uppercase text-center">
-              Shop the new fall winter 2023 collection
-            </span>
-          </div>
-          <div className="flex flex-col w-full h-full gap-6 p-12">
-            <img src="https://bouguessa.com/cdn/shop/files/cec_370x230_crop_center@2x.jpg?v=1677062348"></img>
-            <span className="text-[14px] tracking-[.2em] uppercase text-center">
-              Shop the new fall winter 2023 collection
-            </span>
+          <div className="max-w-[1440px] flex justify-center">
+            {collection.map((item, index) => (
+              <>
+                <div
+                  key={item._id}
+                  className="flex flex-col w-full h-full gap-6 p-12"
+                >
+                  <a href={"/pages/" + item.link}>
+                    <img src={item.image}></img>
+                  </a>
+                  <span className="text-[14px] tracking-[.2em] uppercase text-center">
+                    {item.title}
+                  </span>
+                </div>
+              </>
+            ))}
           </div>
         </div>
       </div>
